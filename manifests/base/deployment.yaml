@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: buggybuddy
+spec:
+  replicas: 1
+  template:
+    spec:
+      serviceAccountName: buggybuddy-sa
+      containers:
+      - name: buggybuddy
+        image: ricarhincapie/buggybuddy:v1
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 8000
+        securityContext:
+          runAsUser: 1000
