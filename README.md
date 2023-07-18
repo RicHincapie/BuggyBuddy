@@ -1,5 +1,5 @@
 # BuggyBuddy
-BuggyBuddy is a Golang server that fails a percentage of responses so you can test resiliency features.
+BuggyBuddy is a Golang server that fails a percentage of responses with 500 Internal Server Error so you can test resiliency features.
 
 Keyphrases:
 * "_I need a microservice which I can make unstable for testing purposes_"
@@ -31,3 +31,5 @@ Initial failure rate is 70%
 
 ## TODO
 * Create endpoints to make responses slower
+* Use a file to store config
+* Load config using CM
